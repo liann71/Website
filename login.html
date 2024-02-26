@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub: Login</title>
+    <style>
+        .centre {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="centre">
+        <h1>Welcome!</h1>
+        <h5>Enter username and password:</h5>
+        Username: <input type="text"><br><br>
+        Password: <input type="password" id="password"><br>
+    </div><br>
+    <div class="centre">
+        <small><a href="#" id="forgot-password-link">Forgot password?</a><br><br>
+        <a href="#" id="signup-link">Sign Up</a> instead.</small><br><br>
+        <button>Sign in</button>
+    </div>
+    
+    <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Find the signup link by its ID
+            var signupLink = document.getElementById("signup-link");
+
+            // Add a click event listener to the signup link
+            signupLink.addEventListener("click", function(event) {
+                // Prevent the default action of the link (e.g., navigating to a different page)
+                event.preventDefault();
+
+                // Redirect the user to the signup page
+                window.location.href = "signup.html"; // Replace "signup.html" with the actual URL of your signup page
+            });
+        });
+    </script>
+</body>
+</html>
